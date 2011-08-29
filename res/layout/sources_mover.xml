@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/******************************************************************************
+ * Copyright (c) 2006-2011 Quality & Usability Lab                            *
+ *                         Deutsche Telekom Laboratories, TU Berlin           *
+ *                         Ernst-Reuter-Platz 7, 10587 Berlin, Germany        *
+ *                                                                            *
+ * This file is part of the SoundScape Renderer (SSR).                        *
+ *                                                                            *
+ * The SSR is free software:  you can redistribute it and/or modify it  under *
+ * the terms of the  GNU  General  Public  License  as published by the  Free *
+ * Software Foundation, either version 3 of the License,  or (at your option) *
+ * any later version.                                                         *
+ *                                                                            *
+ * The SSR is distributed in the hope that it will be useful, but WITHOUT ANY *
+ * WARRANTY;  without even the implied warranty of MERCHANTABILITY or FITNESS *
+ * FOR A PARTICULAR PURPOSE.                                                  *
+ * See the GNU General Public License for more details.                       *
+ *                                                                            *
+ * You should  have received a copy  of the GNU General Public License  along *
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.            *
+ *                                                                            *
+ * The SSR is a tool  for  real-time  spatial audio reproduction  providing a *
+ * variety of rendering algorithms.                                           *
+ *                                                                            *
+ * http://tu-berlin.de/?id=ssr                  SoundScapeRenderer@telekom.de *
+ ******************************************************************************/
+
+/* 
+ * $LastChangedDate: $
+ * $LastChangedRevision: $
+ * $LastChangedBy: $
+ */
+-->
+
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  	<de.tlabs.ssr.g1.client.SourcesView 
+    	android:id="@+id/sources_mover_view"
+		android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent" 
+    />
+	<LinearLayout
+    	android:orientation="vertical"
+    	android:id="@+id/buttons_layout"
+		android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentRight="true"
+    	android:layout_alignParentTop="true"
+    	>
+		<LinearLayout
+	    	android:orientation="horizontal"
+			android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content"
+	    	>
+			<ImageButton
+		    	android:id="@+id/zoomout_button"
+				android:layout_width="fill_parent" 
+		    	android:layout_height="wrap_content" 
+		    	android:layout_weight="1"
+				android:src="@drawable/smaller"
+				android:background="@drawable/button_background"
+		    />
+			<View
+				android:layout_width="1px"
+				android:layout_height="fill_parent"
+				android:background="#FFFFFFFF"
+			/>			
+			<ImageButton 
+				android:id="@+id/zoomin_button"
+				android:layout_width="fill_parent" 
+		    	android:layout_height="wrap_content" 
+		    	android:layout_weight="1" 
+				android:src="@drawable/bigger"
+				android:background="@drawable/button_background"
+			/>
+			<View
+				android:layout_width="1px"
+				android:layout_height="fill_parent"
+				android:background="#FFFFFFFF"
+			/>			
+			<ImageButton
+		    	android:id="@+id/help_button"
+				android:layout_width="fill_parent" 
+		    	android:layout_height="wrap_content"
+		    	android:layout_weight="1" 
+				android:src="@drawable/help"
+				android:background="@drawable/button_background"
+		    />
+	    </LinearLayout>
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="1px"
+			android:background="#FFFFFFFF"
+		/>			
+    </LinearLayout>
+	<RelativeLayout
+    	android:id="@+id/help_layout"
+		android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent"
+		android:background="#A0000000"
+    	android:visibility="invisible"
+    	>
+    	<ScrollView
+			android:layout_width="wrap_content" 
+    		android:layout_height="wrap_content"
+    		android:layout_centerInParent="true"
+    		android:scrollbarStyle="outsideInset"
+    		>
+	    	<TextView
+		    	android:id="@+id/help_textview"
+				android:layout_width="wrap_content" 
+	    		android:layout_height="wrap_content"
+	    		android:text="@string/help_text"
+	       		android:autoLink="web|email"
+	    	/>
+	    </ScrollView>
+    </RelativeLayout>
+	<RelativeLayout
+    	android:id="@+id/transport_layout"
+		android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent"
+		android:background="#A0000000"
+    	android:visibility="invisible"
+    	>
+		<LinearLayout
+	    	android:orientation="vertical"
+			android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content"
+	    	android:layout_centerInParent="true"
+	    	>
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="1px"
+				android:background="#FFFFFFFF"
+			/>			
+			<LinearLayout
+		    	android:orientation="horizontal"
+				android:layout_width="fill_parent" 
+		    	android:layout_height="150px"
+		    	>
+				<ImageButton
+			    	android:id="@+id/rewind_button"
+					android:layout_width="fill_parent" 
+			    	android:layout_height="fill_parent"
+			    	android:layout_weight="1"
+					android:src="@drawable/rewind"
+					android:background="@drawable/button_background"
+			    />
+				<View
+					android:layout_width="1px"
+					android:layout_height="fill_parent"
+					android:background="#FFFFFFFF"
+				/>			
+				<ImageButton 
+					android:id="@+id/play_button"
+					android:layout_width="fill_parent" 
+			    	android:layout_height="fill_parent"
+			    	android:layout_weight="1" 
+					android:src="@drawable/play"
+					android:background="@drawable/button_background"
+				/>
+				<ImageButton 
+					android:id="@+id/pause_button"
+					android:layout_width="fill_parent" 
+			    	android:layout_height="fill_parent"
+			    	android:layout_weight="1" 
+					android:src="@drawable/pause"
+					android:background="@drawable/button_background"
+					android:visibility="gone"
+				/>
+				<View
+					android:layout_width="1px"
+					android:layout_height="fill_parent"
+					android:background="#FFFFFFFF"
+					android:visibility="gone"
+				/>			
+				<ImageButton
+			    	android:id="@+id/exit_button"
+					android:layout_width="fill_parent" 
+			    	android:layout_height="fill_parent"
+			    	android:layout_weight="1" 
+					android:src="@drawable/close"
+					android:background="@drawable/button_background"
+					android:visibility="gone"
+			    />
+		    </LinearLayout>
+			<View
+				android:layout_width="fill_parent"
+				android:layout_height="1px"
+				android:background="#FFFFFFFF"
+			/>			
+	    </LinearLayout>
+		<de.tlabs.ssr.g1.client.CustomSeekBar
+			android:id="@+id/volume_seekbar"
+			android:layout_width="fill_parent"
+			android:layout_height="45px"
+    		android:layout_alignParentBottom="true"
+			android:max="100" 
+			android:thumb="@null"
+		/>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="wrap_content" 
+    		android:layout_height="wrap_content" 
+    		android:layout_above="@id/volume_seekbar" 
+    		android:layout_alignLeft="@id/volume_seekbar"
+	    	>
+	 		<TextView 
+	    		android:text="@string/volume_label"
+				android:layout_width="wrap_content" 
+		    	android:layout_height="wrap_content" 
+	    		android:layout_weight="1" 
+	    		android:layout_marginRight="5px" 
+		    />
+	 		<TextView 
+				android:id="@+id/volume_textview"
+				android:layout_width="wrap_content" 
+		    	android:layout_height="wrap_content" 
+	    		android:layout_weight="1" 
+		    />
+	    </LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>  
+    <drawable name="col_btn_pressed">#8FFF</drawable>  
+    <drawable name="col_btn_focused">#8AAA</drawable>  
+    <drawable name="col_btn_default">#8666</drawable>
+    
+    <drawable name="col_listener">#FFFFFFFF</drawable>
+    <drawable name="col_loudspeaker">#FF808080</drawable>
+</resources>  

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="enter_host_port">Enter host:port of SSR server:</string>
+<string name="listenerfixed_mode">Fixed listener </string>
+<string name="listenerfixedtracking_mode">Fixed listener + orientation tracking</string>
+<string name="sourcesfixed_mode">Fixed sound sources</string>
+<string name="connect_predefined">Recent SSR servers:</string>
+<string name="app_name">SSR Remote</string>
+<string name="ok_button">Connect</string>
+<string name="cancel_button">Cancel</string>
+<string name="connector_help_button">Help</string>
+<string name="default_server">audioserver2.qu.t-labs.tu-berlin.de:4711</string>
+<string name="volume_label">Overall volume:</string>
+<string name="help_text">
+\n\n
+HOW TO USE THIS?\n
+\n
+Watch a quick demo of the App:\n
+youtube.com/watch?v=109XuafI7C8\n
+\n\n
+Single tap sound source\n
+\t\t–> (de)select that sound source\n
+Single tap background\n
+\t\t–>(de)select all sound sources\n
+\n\n
+Double tap selected sound source\n
+\t\t–>(un)mute all selected sound sources\n
+Double tap deselected sound source\n
+\t\t–>(un)mute that sound source\n
+Double tap background\n
+\t\t–>fit scene into screen\n
+\n\n
+Drag selected sound source\n
+\t\t–>move all selected sound sources\n
+Drag deselected sound source\n
+\t\t–>move that sound source\n
+Drag background\n
+\t\t–>move viewport\n
+\n\n
+CONTACT\n
+\t\tSoundScapeRenderer@telekom.de\n
+\n
+SoundScape Renderer:\n
+\t\ttu-berlin.de/?id=ssr\n
+Spatial Audio Research Group:\n
+\t\taudio.qu.tu-berlin.de\n
+Quality and Usability Lab:\n
+\t\tqu.tu-berlin.de\n
+\n
+</string>
+<string name="connector_help_text">
+Please make sure you have a SoundScape Renderer Server up and running in a reachable network.\n
+\n
+Enter host name/ip address and port of the server, choose the style of displaying listener orientation changes and hit connect.\n
+\n
+Watch a quick demo of the App:\n
+youtube.com/watch?v=109XuafI7C8\n
+\n\n
+Contact\n
+\t\tSoundScapeRenderer@telekom.de\n
+\n
+SoundScape Renderer:\n
+\t\ttu-berlin.de/?id=ssr\n
+Spatial Audio Research Group:\n
+\t\taudio.qu.tu-berlin.de\n
+Quality and Usability Lab:\n
+\t\tqu.tu-berlin.de
+</string>
+<string-array name="predefinedservers_list">
+	<item>192.168.0.1:4711</item>
+	<item>192.168.178.1:4711</item>
+	<item>audioserver2.qu.t-labs.tu-berlin.de:4711</item>
+</string-array>
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+/******************************************************************************
+ * Copyright (c) 2006-2011 Quality & Usability Lab                            *
+ *                         Deutsche Telekom Laboratories, TU Berlin           *
+ *                         Ernst-Reuter-Platz 7, 10587 Berlin, Germany        *
+ *                                                                            *
+ * This file is part of the SoundScape Renderer (SSR).                        *
+ *                                                                            *
+ * The SSR is free software:  you can redistribute it and/or modify it  under *
+ * the terms of the  GNU  General  Public  License  as published by the  Free *
+ * Software Foundation, either version 3 of the License,  or (at your option) *
+ * any later version.                                                         *
+ *                                                                            *
+ * The SSR is distributed in the hope that it will be useful, but WITHOUT ANY *
+ * WARRANTY;  without even the implied warranty of MERCHANTABILITY or FITNESS *
+ * FOR A PARTICULAR PURPOSE.                                                  *
+ * See the GNU General Public License for more details.                       *
+ *                                                                            *
+ * You should  have received a copy  of the GNU General Public License  along *
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.            *
+ *                                                                            *
+ * The SSR is a tool  for  real-time  spatial audio reproduction  providing a *
+ * variety of rendering algorithms.                                           *
+ *                                                                            *
+ * http://tu-berlin.de/?id=ssr                  SoundScapeRenderer@telekom.de *
+ ******************************************************************************/
+
+/* 
+ * $LastChangedDate: $
+ * $LastChangedRevision: $
+ * $LastChangedBy: $
+ */
+-->
+
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+   	android:id="@+id/connector_scrollview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+	<LinearLayout 
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">
+		<TextView 
+			android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content" 
+	    	android:text="@string/enter_host_port"
+	    />
+	    <EditText
+	    	android:id="@+id/host_port_edit"
+			android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content" 
+	    	android:text="@string/default_server"
+	    />
+		<RadioGroup 
+			android:id="@+id/viewmode_radiogroup"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<RadioButton
+				android:id="@+id/listenerfixed_radiobtn"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+	    		android:text="@string/listenerfixed_mode"
+	    		android:checked="true"
+	    	/>
+			<RadioButton
+				android:id="@+id/listenerfixedtracking_radiobtn"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+	    		android:text="@string/listenerfixedtracking_mode"
+	    	/>
+			<RadioButton
+				android:id="@+id/sourcesfixed_radiobtn"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+	    		android:text="@string/sourcesfixed_mode"
+	    	/>
+		</RadioGroup>
+		<LinearLayout
+	    	android:orientation="horizontal"
+			android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content"> 
+		    <Button
+		    	android:id="@+id/ok_button"
+				android:layout_width="wrap_content" 
+		    	android:layout_height="wrap_content"
+		    	android:layout_weight="1" 
+		    	android:text="@string/ok_button"
+		    />
+		    <Button
+		    	android:id="@+id/cancel_button"
+				android:layout_width="wrap_content" 
+		    	android:layout_height="wrap_content" 
+		    	android:layout_weight="1" 
+		    	android:text="@string/cancel_button"
+		    	android:enabled="false"
+		    />
+		    <Button
+		    	android:id="@+id/connector_help_button"
+				android:layout_width="wrap_content" 
+		    	android:layout_height="wrap_content" 
+		    	android:layout_weight="1" 
+		    	android:text="@string/connector_help_button"
+		    />
+		</LinearLayout>   
+		<View
+			android:layout_width="fill_parent"
+			android:layout_height="0px"
+			android:layout_marginTop="30px"
+			android:layout_marginBottom="0px"
+			android:background="#FFFFFFFF"
+		/>
+	 	<TextView 
+			android:layout_width="fill_parent" 
+	    	android:layout_height="wrap_content" 
+	    	android:text="@string/connect_predefined"
+	    />
+	    <ListView
+	    	android:id="@+id/predefinedservers_listview"
+			android:layout_width="fill_parent" 
+	    	android:layout_height="1000px"
+	    	android:entries="@array/predefinedservers_list"
+	    />
+   	</LinearLayout>
+</ScrollView>
