@@ -12,8 +12,8 @@ How to build the project
 ------------------------
 (This description is for Eclipse 3.5, in current newer versions things might be different.)
 
-Import the project into Eclipse using "File -> Import... -> Existing Projects into Workspace". The project root folder is the folder that contains this readme.
+Import the project into Eclipse using "File -> Import... -> General -> Existing Projects into Workspace". The project root folder is the folder that contains this readme.
 
-Depending on your default Java Compiler settings there might be a lot of errors. Make sure Java Compiler compilance level is set to 1.6 (above should work too). Go to "Project -> Properties -> Java Compiler", check "Enable project specific settings", set "Compiler compilance level" to "1.6" and check "Use default compilance settings".
+Depending on your default Java Compiler settings there might be a lot of errors. Make sure the Java Compiler compilance level of the project is set to 1.6 (above should work too): Right-click the project and go to "Properties -> Java Compiler", check "Enable project specific settings", set "Compiler compilance level" to "1.6" and check "Use default compilance settings".
 
-Build and run the project using "Run -> Run As -> Android Application".
+Build and run the project: Right-click the project and do "Run As -> Android Application".
